@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Api Test</title>
+    </head>
+    <body>
+        <h3>Test File</h3>
+
+        <script>
+            console.log("Test file executed!");
+            fetch('http://localhost:8080/message') // Replace with your API endpoint
+                .then(response => {
+                    if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json(); // Parse the response body as JSON
+                })
+                .then(data => {
+                    console.log('Data received:', data);
+                    // Process the received data here
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        </script>
+    </body>
+</html>
