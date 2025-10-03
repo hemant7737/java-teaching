@@ -23,4 +23,6 @@ build->
                         ->operators
                             .class   
 ------------------------------------------------
-javac -d . filename.java                            
+javac -d . filename.java   
+
+javac -d . java
